@@ -18,5 +18,10 @@ app.config['MONGO_URI'] = os.getenv('MONGO_URI')
 app.register_blueprint(auth_bp)
 app.register_blueprint(tree_bp)
 
+# Add a homepage route to confirm deployment
+@app.route('/')
+def index():
+    return '✅ Flask Tree API is live and running!'
+
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0", port=10000)
