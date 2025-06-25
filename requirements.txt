@@ -3,3 +3,4 @@ flask-cors
 pymongo
 dnspython
 Werkzeug
+python-dotenv>=1.0.0
